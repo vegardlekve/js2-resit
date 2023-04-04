@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto Slab", serif;
+    color: #444;
+    margin: 2rem;
+}
+
+h5 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+nav a {
+    text-decoration: none;
+    margin-right: 1rem;
+    color: #888;
+}
+
+nav a.active {
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.ice-creams {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ice-cream {
+    padding: 1rem;
+    border: 2px grey solid;
+    border-radius: 1rem;
+    flex: 0 0 30%;
+    margin: 0 1rem 1rem 0;
+    position: relative;
+}
+
+.cart-item {
+    padding: 1rem;
+    border: 2px grey solid;
+    border-radius: 1rem;
+    margin: 0 1rem 1rem 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 3rem;
+}
+
+.price {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    color: #222;
+    border-radius: 100%;
+    background: #ebebeb;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+    padding: 3px;
+    background: white;
+    color: #666;
+    border-radius: 10px;
+}
+
+.cart-button.added {
+    background: #333;
+    color: white;
+}
+
+.cart-button::before {
+    content: "Add";
+}
+
+.cart-button.added::before {
+    content: "Remove";
+}
+
+.cart-delete-button {
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+    padding: 3px;
+    background: #333;
+    color: white;
+    border-radius: 10px;
+}
+
+.cart-delete-button::before {
+    content: "Remove";
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.clear {
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+    padding: 3px;
+    background: white;
+    color: #666;
+    border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+    .ice-cream {
+        flex: 0 0 100%;
+        margin: 0 0 1rem 0;
+    }
+}
